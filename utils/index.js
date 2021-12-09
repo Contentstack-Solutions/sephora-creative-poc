@@ -4,7 +4,7 @@ import ContentstackLivePreview from "@contentstack/live-preview-utils";
 
 const Stack = Contentstack.Stack({
   api_key: "bltbf189e64bac3487b",
-  delivery_token: "cs9ac78758419a8c1c1336b1ff",
+  delivery_token: "cse4948a93c2c3376b5de7f177",
   environment: "published",
   region: Contentstack.Region.EU,
   live_preview: {

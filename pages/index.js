@@ -12,6 +12,7 @@ export default function Home() {
   useEffect(() => {
     const Fetchdata = () => {
       fetch(
+        // ${Stack.live_preview.hash ? `&live_preview=${Stack.live_preview.hash}`: ''}
         `https://eu-api.contentstack.com/v3/content_types/campaign/entries/bltd0f5bb1c68824d57?environment=preview&include[]=creatives.creative`,
         {
           method: "GET",
@@ -24,7 +25,7 @@ export default function Home() {
       )
         .then((res) => res.json())
         .then((data) => {
-          addEditableTags(data, "landing_pages", true);
+          // addEditableTags(data, "campaign", true);
           setData(data);
           setLoading(false);
         });
@@ -39,9 +40,10 @@ export default function Home() {
     return <div className="App">Loading...</div>;
   }
 
-  if (!data.entry) {
-    return <div className="App">Loading...</div>;
-  }
+  console.log(data)
+  // if (!data.entry) {
+  //   return <div className="App">Loading...</div>;
+  // }
 
   return (
     <div>
