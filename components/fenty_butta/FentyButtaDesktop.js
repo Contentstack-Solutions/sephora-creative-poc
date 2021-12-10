@@ -1,8 +1,7 @@
 import {Col, Row} from 'react-bootstrap'
 
 export default function FentyButtaDesktop({props}) {
-    const data = props[0]
-    console.log(data.body_short)
+    const data = props
     return(
         <Row>
             <h2>{data.header_long}</h2>

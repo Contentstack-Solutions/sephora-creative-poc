@@ -12,8 +12,7 @@ export default function Home() {
   useEffect(() => {
     const Fetchdata = () => {
       fetch(
-        // ${Stack.live_preview.hash ? `&live_preview=${Stack.live_preview.hash}`: ''}
-        `https://eu-api.contentstack.com/v3/content_types/campaign/entries/bltd0f5bb1c68824d57?environment=preview&include[]=creatives.creative`,
+        `https://eu-api.contentstack.com/v3/content_types/creative/entries/bltc87cf736e7e84ce1?environment=preview${Stack.live_preview.hash ? `&live_preview=${Stack.live_preview.hash}`: ''}`,
         {
           method: "GET",
           headers: {
@@ -25,7 +24,7 @@ export default function Home() {
       )
         .then((res) => res.json())
         .then((data) => {
-          // addEditableTags(data, "campaign", true);
+          addEditableTags(data, "campaign", true);
           setData(data);
           setLoading(false);
         });
@@ -41,20 +40,21 @@ export default function Home() {
   }
 
   console.log(data)
-  // if (!data.entry) {
-  //   return <div className="App">Loading...</div>;
-  // }
+
+  if (!data) {
+    return <div className="App">Loading...</div>;
+  }
 
   return (
     <div>
       <Row className="m-5">
         <Col sm={6}>
           <h1>Desktop</h1>
-          <FentyButtaDesktop props={data.entry.creatives.creative} />
+          <FentyButtaDesktop props={data.entry} />
         </Col>
         <Col sm={6}>
           <h1>Mobile</h1>
-          <FentyButtaMobile props={data.entry.creatives.creative} />
+          <FentyButtaMobile props={data.entry} />
         </Col>
       </Row>
     </div>
