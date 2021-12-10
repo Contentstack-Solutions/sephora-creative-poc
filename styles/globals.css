@@ -18,3 +18,85 @@ a {
 img {
   max-width: 100%;
 }
+
+.fenty-butta-desktop {
+  width: 750px;
+  height: 190px;
+  margin-bottom: 5rem;
+}
+
+.fenty-butta-desktop-copy {
+  padding: .75rem;
+}
+
+.fenty-butta-desktop-copy > h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  font-weight: 400;
+  max-width: 60%;
+}
+
+.fenty-butta-desktop-copy > p, .fenty-butta-desktop-copy > p > p {
+  font-size: 0.75rem;
+  height: fit-content;
+  margin-bottom: 0!important;
+}
+
+.fenty-butta-desktop-seal {
+  position: absolute;
+  padding-top: 2rem;
+  padding-left: 39rem;
+  margin-bottom: 2rem;
+  margin: 0 auto;
+  max-width: 750px;
+}
+
+.fenty-butta-desktop-product {
+  position: absolute;
+  padding-left: 18rem;
+  padding-top: 3rem;
+  justify-self: center;
+  margin-bottom: 2rem;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.fenty-butta-mobile {
+  width: 600px;
+  height: 300px;
+  margin-bottom: 5rem;
+}
+
+.fenty-butta-mobile-copy {
+  padding: 1rem;
+}
+
+.fenty-butta-mobile-copy > h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.fenty-butta-mobile-copy > p, .fenty-butta-mobile-copy > p > p {
+  font-size: 1.2rem;
+  height: fit-content;
+  margin-bottom: 0!important;
+}
+
+.fenty-butta-mobile-seal {
+  position: absolute;
+  padding-left: 27rem;
+  margin-bottom: 2rem;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.fenty-butta-mobile-product {
+  position: absolute;
+  padding-left: 12rem;
+  padding-top: 10rem;
+  justify-self: center;
+  margin-bottom: 2rem;
+  margin: 0 auto;
+  max-width: 500px;
+}

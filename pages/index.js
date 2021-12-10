@@ -1,7 +1,7 @@
 import Stack, { onEntryChange } from "../utils";
 import { addEditableTags } from "@contentstack/utils";
 import { useState, useEffect } from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Container } from "react-bootstrap";
 import FentyButtaMobile from "../components/fenty_butta/FentyButtaMobile";
 import FentyButtaDesktop from "../components/fenty_butta/FentyButtaDesktop";
 
@@ -47,16 +47,14 @@ export default function Home() {
 
   return (
     <div>
-      <Row className="m-5">
-        <Col sm={6}>
+      <Container className="m-5">
           <h1>Desktop</h1>
           <FentyButtaDesktop props={data.entry} />
-        </Col>
-        <Col sm={6}>
+
+          
           <h1>Mobile</h1>
           <FentyButtaMobile props={data.entry} />
-        </Col>
-      </Row>
+      </Container>
     </div>
   );
 }
