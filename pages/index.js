@@ -24,7 +24,7 @@ export default function Home() {
       )
         .then((res) => res.json())
         .then((data) => {
-          addEditableTags(data, "campaign", true);
+          addEditableTags(data, "creative", true);
           setData(data);
           setLoading(false);
         });
@@ -51,7 +51,7 @@ export default function Home() {
           <h1>Desktop</h1>
           <FentyButtaDesktop props={data.entry} />
 
-          
+
           <h1>Mobile</h1>
           <FentyButtaMobile props={data.entry} />
       </Container>

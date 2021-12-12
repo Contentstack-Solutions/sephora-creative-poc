@@ -34,12 +34,15 @@ img {
   font-size: 2rem;
   font-weight: 400;
   max-width: 60%;
+  z-index: 2;
 }
 
 .fenty-butta-desktop-copy > p, .fenty-butta-desktop-copy > p > p {
   font-size: 0.75rem;
   height: fit-content;
   margin-bottom: 0!important;
+  pointer-events:auto;
+  z-index: 2;
 }
 
 .fenty-butta-desktop-seal {
@@ -49,6 +52,7 @@ img {
   margin-bottom: 2rem;
   margin: 0 auto;
   max-width: 750px;
+  z-index: 0;
 }
 
 .fenty-butta-desktop-product {
@@ -59,6 +63,7 @@ img {
   margin-bottom: 2rem;
   margin: 0 auto;
   max-width: 600px;
+  z-index: 0;
 }
 
 .fenty-butta-mobile {
@@ -75,12 +80,14 @@ img {
   font-family: 'Times New Roman', Times, serif;
   font-size: 2.5rem;
   font-weight: 400;
+  z-index: 2;
 }
 
 .fenty-butta-mobile-copy > p, .fenty-butta-mobile-copy > p > p {
   font-size: 1.2rem;
   height: fit-content;
   margin-bottom: 0!important;
+  z-index: 2;
 }
 
 .fenty-butta-mobile-seal {
@@ -89,6 +96,7 @@ img {
   margin-bottom: 2rem;
   margin: 0 auto;
   max-width: 600px;
+  z-index: 0;
 }
 
 .fenty-butta-mobile-product {
@@ -99,4 +107,8 @@ img {
   margin-bottom: 2rem;
   margin: 0 auto;
   max-width: 500px;
+  z-index: 0;
+}
+strong {
+  color: rgb(198, 7, 7);
 }
