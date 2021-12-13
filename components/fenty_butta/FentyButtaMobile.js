@@ -14,11 +14,11 @@ export default function FentyButtaMobile({ props }) {
                     `${data.uid}.en-us`
                   )}
         >{data.header_short}</h2>
-        <p          data-cslp={data.$.body_copy_long["data-cslp"].replace(
+        <p          data-cslp={data.$.body_copy_short["data-cslp"].replace(
             "undefined.en-us.entry",
             `${data.uid}.en-us`
           )}
-          dangerouslySetInnerHTML={{ __html: data.body_copy_long.replace("PROMOCODE", `<strong>${data.promo_code}</strong>`) }}></p>
+          dangerouslySetInnerHTML={{ __html: data.body_copy_short.replace("PROMOCODE", `<strong>${data.promo_code}</strong>`) }}></p>
         <p>{data.cta.title}</p>
         <p 
                   data-cslp={data.$.legal_short["data-cslp"].replace(
