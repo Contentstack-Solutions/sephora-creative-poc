@@ -47,7 +47,7 @@ const Creative = (params) => {
   useEffect(() => {
     const Fetchdata = () => {
       fetch(
-        `https://eu-api.contentstack.com/v3/content_types/creative/entries?environment=preview${
+        `https://eu-api.contentstack.com/v3/content_types/creative/entries${
           Stack.live_preview.hash
             ? `&live_preview=${Stack.live_preview.hash}`
             : ""
@@ -75,21 +75,27 @@ const Creative = (params) => {
   }, []);
 
 
-  if (router.isFallback) {
-    return <div>loading...</div>
-  }
-
   if (isLoading) {
     return <div className="App">Loading...</div>;
+  }
+
+  if (router.isFallback) {
+    return <div>loading...</div>
   }
 
   if (!data.entries) {
     return <div className="App">Loading...</div>;
   }
 
+
+
   const current_data = data.entries.filter(
     (item) => item.url === `/creative/${router.query.id}`
   );
+
+  if (!current_data) {
+    return <div className="App">Loading...</div>;
+  }
 
   return (
     <div>
