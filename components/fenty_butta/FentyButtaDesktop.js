@@ -2,7 +2,6 @@ import { Col, Row } from "react-bootstrap";
 
 export default function FentyButtaDesktop({ props }) {
   const data = props;
-  console.log(data);
   return (
     <Row
       className="fenty-butta-desktop"

@@ -12,7 +12,11 @@ export default function Home() {
   useEffect(() => {
     const Fetchdata = () => {
       fetch(
-        `https://eu-api.contentstack.com/v3/content_types/creative/entries/bltc87cf736e7e84ce1?environment=preview${Stack.live_preview.hash ? `&live_preview=${Stack.live_preview.hash}`: ''}`,
+        `https://eu-api.contentstack.com/v3/content_types/creative/entries?environment=preview${
+          Stack.live_preview.hash
+            ? `&live_preview=${Stack.live_preview.hash}`
+            : ""
+        }`,
         {
           method: "GET",
           headers: {
@@ -39,8 +43,6 @@ export default function Home() {
     return <div className="App">Loading...</div>;
   }
 
-  console.log(data)
-
   if (!data) {
     return <div className="App">Loading...</div>;
   }
@@ -48,12 +50,16 @@ export default function Home() {
   return (
     <div>
       <Container className="m-5">
-          <h1>Desktop</h1>
-          <FentyButtaDesktop props={data.entry} />
-
-
-          <h1>Mobile</h1>
-          <FentyButtaMobile props={data.entry} />
+        <h2>Creative</h2>
+        <ul>
+          {data.entries.map((item) => {
+            return (
+              <li key={item.uid}>
+                <a href={item.url}>{item.title}</a>
+              </li>
+            );
+          })}
+        </ul>
       </Container>
     </div>
   );

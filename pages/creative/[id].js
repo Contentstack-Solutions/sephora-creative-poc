@@ -85,8 +85,7 @@ const Creative = (params) => {
   const current_data = data.entries.filter(
     (item) => item.url === `/creative/${router.query.id}`
   );
-
-  console.log(current_data)
+  
   return (
     <div>
       <Container className="m-5">
