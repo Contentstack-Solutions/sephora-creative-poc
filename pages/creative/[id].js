@@ -28,7 +28,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
@@ -74,6 +74,11 @@ const Creative = (params) => {
     });
   }, []);
 
+
+  if (router.isFallback) {
+    return <div>loading...</div>
+  }
+
   if (isLoading) {
     return <div className="App">Loading...</div>;
   }
@@ -85,7 +90,7 @@ const Creative = (params) => {
   const current_data = data.entries.filter(
     (item) => item.url === `/creative/${router.query.id}`
   );
-  
+
   return (
     <div>
       <Container className="m-5">
