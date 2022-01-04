@@ -21,7 +21,7 @@ export default function FentyButtaDesktop({ props }) {
             "undefined.en-us.entry",
             `${data.uid}.en-us`
           )}
-          dangerouslySetInnerHTML={{ __html: data.body_copy_short.replace("PROMOCODE", `<strong>${data.promo_code}</strong>`) }}
+          dangerouslySetInnerHTML={{ __html: data.body_copy_short.replace("PROMOCODE", `<strong style="color:${data.color_for_promocode}">${data.promo_code}</strong>`) }}
         ></p>
         <p>{data.cta.title}</p>
         <p

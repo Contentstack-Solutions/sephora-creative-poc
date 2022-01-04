@@ -2,6 +2,7 @@ import { Col, Row } from "react-bootstrap";
 
 export default function FentyButtaMobile({ props }) {
   const data = props;
+
   return (
     <Row
       className="fenty-butta-mobile"
@@ -18,7 +19,7 @@ export default function FentyButtaMobile({ props }) {
             "undefined.en-us.entry",
             `${data.uid}.en-us`
           )}
-          dangerouslySetInnerHTML={{ __html: data.body_copy_short.replace("PROMOCODE", `<strong>${data.promo_code}</strong>`) }}></p>
+          dangerouslySetInnerHTML={{ __html: data.body_copy_short.replace("PROMOCODE", `<strong style="color:${data.color_for_promocode}">${data.promo_code}</strong>`) }}></p>
         <p>{data.cta.title}</p>
         <p 
                   data-cslp={data.$.legal_short["data-cslp"].replace(
