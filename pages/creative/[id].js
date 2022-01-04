@@ -64,11 +64,12 @@ export const getStaticProps = async () => {
 
 const Creative = (params) => {
   const router = useRouter();
-  const uid = params.data.entries.filter((item) => (item.url == `/creative/${router.query.id}`))
+
   const [data, setData] = useState({});
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
+    const uid = params.data.entries.filter((item) => (item.url == `/creative/${router.query.id}`))
     const Fetchdata = () => {
       fetch(
         `https://eu-api.contentstack.com/v3/content_types/creative/entries/${uid[0].uid}?include_fallback=true${
