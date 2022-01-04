@@ -107,7 +107,9 @@ const Creative = (params) => {
     return <div className="App">Loading...</div>;
   }
 
-  console.log(data)
+  if (!data.entry) {
+    return <div className="App">Loading...</div>;
+  }
 
   return (
     <div>
