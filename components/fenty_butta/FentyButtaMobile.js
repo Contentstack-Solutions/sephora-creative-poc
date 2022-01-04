@@ -29,7 +29,7 @@ export default function FentyButtaMobile({ props }) {
             ),
           }}
         ></p>
-        {/* <p>{data.cta.title.length > 0 ? data.cta.title : "loading"}</p> */}
+         <p className="cta">{data.cta ? data.cta[0].title : ""}</p>
         <p
           data-cslp={data.$.legal_short["data-cslp"].replace(
             "undefined.en-us.entry",

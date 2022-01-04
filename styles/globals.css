@@ -112,3 +112,7 @@ img {
 strong {
   color: rgb(198, 7, 7);
 }
+
+.cta {
+  font-weight: 900;
+}

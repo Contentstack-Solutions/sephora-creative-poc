@@ -1,7 +1,9 @@
 import { Col, Row } from "react-bootstrap";
 
+
 export default function FentyButtaDesktop({ props }) {
   const data = props;
+  console.log(data.cta[0].title)
   return (
     <Row
       className="fenty-butta-desktop"
@@ -23,7 +25,7 @@ export default function FentyButtaDesktop({ props }) {
           )}
           dangerouslySetInnerHTML={{ __html: data.body_copy_short.replace("PROMOCODE", `<strong style="color:${data.color_for_promocode ? data.color_for_promocode: ""}">${data.promo_code}</strong>`) }}
         ></p>
-        {/* <p>{data.cta.title}</p> */}
+        <p className="cta">{data.cta ? data.cta[0].title : ""}</p>
         <p
           data-cslp={data.$.legal_long["data-cslp"].replace(
             "undefined.en-us.entry",
