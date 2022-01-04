@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 import FentyButtaMobile from "../../components/fenty_butta/FentyButtaMobile";
 import FentyButtaDesktop from "../../components/fenty_butta/FentyButtaDesktop";
 
-var temp = 0
 export const getStaticPaths = async () => {
   const res = await fetch(
     `https://eu-api.contentstack.com/v3/content_types/creative/entries?locale=en-us&include_fallback=true${
@@ -61,7 +60,6 @@ export const getStaticProps = async () => {
 };
 
 
-
 const Creative = (params) => {
   const router = useRouter();
 
@@ -101,7 +99,7 @@ const Creative = (params) => {
 
 
   if (isLoading) {
-    return <div className="App">Loading... is loading</div>;
+    return <div className="App">Loading...</div>;
   }
 
   if (!data) {
