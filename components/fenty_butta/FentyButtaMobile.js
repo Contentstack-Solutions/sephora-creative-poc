@@ -25,7 +25,7 @@ export default function FentyButtaMobile({ props }) {
           dangerouslySetInnerHTML={{
             __html: data.body_copy_short.replace(
               "PROMOCODE",
-              `<strong style="color:${data.color_for_promo ? data.color_for_promo : "black"}">${data.promo_code ? data.promo_code : ""}</strong>`
+              `<strong style="color:${data.color_for_promocode ? data.color_for_promocode : "black"}">${data.promo_code ? data.promo_code : ""}</strong>`
             ),
           }}
         ></p>
